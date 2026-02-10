@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Bitmac TV - تطبيق الترفيه الشامل</title>
-    <meta name="description" content="تطبيق Bitmac TV - شاهد آلاف الأفلام والمسلسلات، القنوات المباشرة، القنوات الرياضية، وأكثر بجودة عالية ومجاناً!">
+    <title>OTTO TV+ - تطبيق الترفيه الشامل</title>
+    <meta name="description" content="تطبيق OTTO TV+ - شاهد آلاف الأفلام والمسلسلات، القنوات المباشرة، القنوات الرياضية، وأكثر بجودة عالية ومجاناً!">
     <meta name="theme-color" content="#1a0a2e">
-    <link rel="icon" href="https://f.top4top.io/p_3596vg9is1.png">
+    <meta name="google-site-verification" content="B9PzSvhOPMH-JjKxXcqI_1pjMRCQaNP5K1BBJPHEviA" />
+    <link rel="icon" href="https://c.top4top.io/p_36871b0m81.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -147,6 +149,7 @@
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(108, 99, 255, 0.5);
             transition: transform 0.3s ease;
+            object-fit: cover;
         }
 
         .app-icon:hover {
@@ -970,9 +973,9 @@
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="https://f.top4top.io/p_3596vg9is1.png" alt="Bitmac TV" class="app-icon">
+                <img src="https://c.top4top.io/p_36871b0m81.jpg" alt="OTTO TV+" class="app-icon">
                 <div class="logo-text">
-                    <h1>Bitmac TV</h1>
+                    <h1>OTTO TV+</h1>
                     <p>عالمك الترفيهي الشامل</p>
                 </div>
             </div>
@@ -987,7 +990,7 @@
         </div>
         <h2>
             استمتع بأفضل تجربة ترفيهية مع<br>
-            <span class="gradient-text">Bitmac TV</span>
+            <span class="gradient-text">OTTO TV+</span>
         </h2>
         <p>
             تطبيقك الشامل لمشاهدة آلاف الأفلام والمسلسلات العربية والأجنبية، القنوات المباشرة، القنوات الرياضية بما فيها beIN Sports، وأكثر بجودة عالية وبدون إعلانات مزعجة!
@@ -999,13 +1002,13 @@
             <div class="phone-mockup">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                    <img src="https://g.top4top.io/p_36100a56z1.jpg" alt="Bitmac TV App">
+                    <img src="https://d.top4top.io/p_36931mt9r1.jpg" alt="OTTO TV+ App">
                 </div>
             </div>
             <div class="phone-mockup">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                    <img src="https://b.top4top.io/p_3611o1kgx1.jpg" alt="Bitmac TV App 2">
+                    <img src="https://c.top4top.io/p_3693rwr5u1.jpg" alt="OTTO TV+ App 2">
                 </div>
             </div>
         </div>
@@ -1044,7 +1047,7 @@
                 </div>
             </a>
 
-            <a href="https://www.mediafire.com/file/dcwupyfvuvof92c/Bitmac_signed.apk/file" class="sheet-option" target="_blank" download>
+            <a href="https://www.mediafire.com/file/lpoc13ac8tin8n8/OTTO_TV%252B_signed.apk/file" class="sheet-option" target="_blank" download>
                 <i class="fas fa-cloud-download-alt"></i>
                 <div class="sheet-option-content">
                     <h4>التحميل المباشر</h4>
@@ -1079,7 +1082,7 @@
     <!-- Features Section -->
     <section class="features-section">
         <div class="section-header">
-            <h3>مميزات <span class="gradient-text">Bitmac TV</span></h3>
+            <h3>مميزات <span class="gradient-text">OTTO TV+</span></h3>
             <p>اكتشف كل ما يميز تطبيقنا ويجعله الخيار الأفضل لك</p>
         </div>
 
@@ -1161,18 +1164,18 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://t.me/bitmactv" class="social-link" target="_blank" aria-label="تيليجرام">
+            <a href="https://t.me/ottotv" class="social-link" target="_blank" aria-label="تيليجرام">
                 <i class="fab fa-telegram"></i>
             </a>
-            <a href="https://www.facebook.com/share/1BPeV1ZcSL/" class="social-link" target="_blank" aria-label="فيسبوك">
+            <a href="#" class="social-link" target="_blank" aria-label="فيسبوك">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="mailto:support@bitmactv.com" class="social-link" aria-label="البريد الإلكتروني">
+            <a href="mailto:support@ottotv.com" class="social-link" aria-label="البريد الإلكتروني">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
         <p class="footer-text">
-            &copy; 2025 Bitmac TV. جميع الحقوق محفوظة<br>
+            &copy; 2025 OTTO TV+. جميع الحقوق محفوظة<br>
             تطبيق للترفيه والمشاهدة المجانية
         </p>
     </footer>
