@@ -1,0 +1,83 @@
+<?php
+
+error_reporting(0);
+
+class ExtractorError extends Exception {}
+
+class FreeshotExtractor
+{
+    private array $headers = [
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
+        'Referer: https://thisnot.business/',
+        'Accept: */*'
+    ];
+
+    private function getUrl(string $url): string
+    {
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_TIMEOUT => 20,
+            CURLOPT_HTTPHEADER => $this->headers
+        ]);
+
+        $body = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        curl_close($ch);
+
+        if ($code != 200 || !$body) {
+            throw new ExtractorError("Failed to fetch source");
+        }
+
+        return $body;
+    }
+
+    public function extract(string $channel): string
+    {
+        $url = "https://popcdn.day/player/" . rawurlencode($channel);
+
+        $html = $this->getUrl($url);
+
+        if (preg_match('/streamUrl\s*:\s*"([^"]+)"/i', $html, $m)) {
+            return stripslashes($m[1]);
+        }
+
+        if (preg_match('/token=([^&"\']+)/i', $html, $m)) {
+            return "https://planetary.lovecdn.ru/" .
+                   $channel .
+                   "/tracks-v1a1/mono.m3u8?token=" .
+                   $m[1];
+        }
+
+        throw new ExtractorError("Stream URL not found");
+    }
+}
+
+$id = $_GET['id'] ?? '';
+
+if (empty($id)) {
+    http_response_code(400);
+    exit("Missing channel id");
+}
+
+try {
+
+    $extractor = new FreeshotExtractor();
+
+    $stream = $extractor->extract($id);
+
+    header("Location: " . $stream, true, 302);
+    exit;
+
+} catch (Exception $e) {
+
+    http_response_code(500);
+    echo $e->getMessage();
+}
+?>
